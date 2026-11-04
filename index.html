@@ -180,20 +180,6 @@ mark.hl span:nth-child(2) { --i: 1; } mark.hl span:nth-child(3) { --i: 2; } mark
 @media (prefers-reduced-motion: reduce) { .hl-js mark.hl span { animation: none !important; opacity: 1; transform: none; } }
 
 /* ---------- beyond the work: editorial photo grid ---------- */
-.gallery { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
-.gallery li { margin: 0; }
-.gallery figure { margin: 0; }
-.gallery .ph { aspect-ratio: 4 / 5; }
-.gallery figcaption { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; }
-.gallery figcaption span:last-child:not(.label) { font: italic 400 1.1rem/1 var(--serif); color: var(--ink); letter-spacing: 0; text-transform: none; }
-.gallery li:nth-child(1) { grid-column: 1 / 5; grid-row: span 2; }
-.gallery li:nth-child(1) .ph { aspect-ratio: auto; height: calc(100% - 34px); min-height: 420px; }
-.gallery li:nth-child(1) figure { height: 100%; }
-.gallery li:nth-child(2) { grid-column: 5 / 9; }
-.gallery li:nth-child(3) { grid-column: 9 / -1; margin-top: 60px; }
-.gallery li:nth-child(4) { grid-column: 5 / 9; }
-.gallery li:nth-child(5) { grid-column: 9 / -1; margin-top: 60px; }
-.gallery li:hover .ph img, .covers li:hover .ph img { transform: scale(1.045); }
 .beyond-note { max-width: 46ch; margin: 0; font: 400 clamp(1.4rem, 2vw, 1.75rem)/1.35 var(--serif); }
 .beyond-note em { font-style: italic; color: var(--wine); }
 
@@ -307,12 +293,6 @@ a.cover-btn { text-decoration: none; color: inherit; }
   .about-grid { display: flex; flex-direction: column; gap: 40px; }
   .about-text { padding-top: 0; }
   .facts { grid-template-columns: minmax(0, 1fr); }
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .gallery li:nth-child(n) { grid-column: auto; grid-row: auto; margin-top: 0; }
-  .gallery li:nth-child(1) { grid-column: 1 / -1; }
-  .gallery li:nth-child(1) .ph { height: auto; min-height: 0; aspect-ratio: 4 / 5; }
-  .gallery li:nth-child(even) { margin-top: 36px; }
-  .gallery figcaption .label { display: none; }
   .bring-grid { grid-template-columns: minmax(0, 1fr); }
   .head { grid-template-columns: minmax(0, 1fr); }
   .covers { grid-template-columns: minmax(0, 1fr); }
@@ -480,7 +460,7 @@ a.cover-btn { text-decoration: none; color: inherit; }
     <div class="head"><h2>About <em>me</em></h2><span class="label">Simarpreet Kaur Nagi</span></div>
     <div class="about-grid">
       <figure class="about-photo">
-      <div class="ph"><img src="images/me/scad.jpg" alt="Simar in a brown blazer, sitting outside a SCAD Atlanta building" width="900" height="1125" loading="lazy"></div>
+      <div class="ph"><img src="images/me/white.jpg" alt="Simar in a white top and shorts, standing outdoors among trees" width="720" height="900" loading="lazy"></div>
       <figcaption class="label">SCAD Atlanta, 2026</figcaption>
     </figure>
       <div class="about-text">
@@ -498,18 +478,6 @@ a.cover-btn { text-decoration: none; color: inherit; }
       <li><span class="n">01</span><p>Curious <em>by nature</em></p></li>
       <li><span class="n">02</span><p>Thoughtful <em>by design</em></p></li>
       <li><span class="n">03</span><p>Driven by <em>meaningful connections</em></p></li>
-    </ul>
-  </div>
-</section>
-<section class="sec inner" style="padding-top:0">
-  <div class="sec-in">
-    <div class="head"><h2>Interests</h2><span class="label">Photography, fashion &amp; nature</span></div>
-    <ul class="gallery">
-      <li><figure><div class="ph"><img src="images/me/golden.jpg" alt="Simar on a park bench under the trees at golden hour" width="720" height="900" loading="lazy"></div><figcaption><span class="label">Nature</span></figcaption></figure></li>
-      <li><figure><div class="ph"><img src="images/me/camera.jpg" alt="Simar in a pink SCAD cap filming on a phone" width="720" height="900" loading="lazy"></div><figcaption><span class="label">Photography</span></figcaption></figure></li>
-      <li><figure><div class="ph"><img src="images/me/night.jpg" alt="Simar on a city street at night in a black top and grey pleated skirt" width="720" height="900" loading="lazy"></div><figcaption><span class="label">Fashion</span></figcaption></figure></li>
-      <li><figure><div class="ph"><img src="images/me/atlanta.jpg" alt="Simar photographing the Atlanta skyline from a balcony" width="720" height="900" loading="lazy"></div><figcaption><span class="label">Photography</span></figcaption></figure></li>
-      <li><figure><div class="ph"><img src="images/me/offduty.jpg" alt="Simar in a white top and shorts, smiling outdoors" width="720" height="900" loading="lazy"></div><figcaption><span class="label">Fashion</span></figcaption></figure></li>
     </ul>
   </div>
 </section>
@@ -767,8 +735,6 @@ a.cover-btn { text-decoration: none; color: inherit; }
     tag('.head', 'sr-line');
     tag('.about-photo .ph', 'sr-ph');
     tag('.about-text > *', 'sr-up', true);
-    tag('.gallery .ph', 'sr-ph', true);
-    tag('.gallery figcaption', 'sr-up', true);
     tag('.bring-grid > li', 'sr-up', true);
     tag('.covers .cover-img', 'sr-ph', true);
     tag('.covers .cover-meta', 'sr-up', true);
