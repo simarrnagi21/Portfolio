@@ -383,6 +383,84 @@ a.cover-btn { text-decoration: none; color: inherit; }
 @media (prefers-reduced-motion: reduce) { .viewer-pages.anim > img.pg { opacity: 1; transform: none; transition: none; } }
 
 
+
+/* ---------- case study page (#/fifa) ---------- */
+.cs-hero { padding-block: clamp(36px, 5vw, 64px) clamp(60px, 7vw, 96px); }
+.cs-back { display: inline-flex; gap: 10px; font: 500 .7rem/1 var(--sans); letter-spacing: .22em; text-transform: uppercase; text-decoration: none; color: var(--muted); margin-bottom: clamp(36px, 5vw, 64px); }
+.cs-back:hover { color: var(--wine); }
+.cs-hero .label { display: block; }
+.cs-title { margin: 18px 0 0; font: 400 clamp(3.4rem, 10vw, 9.6rem)/.88 var(--serif); letter-spacing: -.035em; }
+.cs-title .ln { display: block; overflow: hidden; padding-bottom: .12em; margin-bottom: -.08em; }
+.cs-title .ln > span { display: inline-block; }
+.cs-title .ln:nth-child(2) { padding-left: 14%; }
+.cs-title em { font-style: italic; }
+.cs-lead { margin: clamp(28px, 4vw, 44px) 0 clamp(48px, 6vw, 80px); max-width: 34ch; font: 400 clamp(1.4rem, 2.2vw, 2rem)/1.25 var(--serif); }
+.cs-ph { margin: 0; background: var(--panel); display: grid; place-content: center; text-align: center; color: var(--muted); }
+.cs-ph > span { font: 500 .68rem/1.4 var(--sans); letter-spacing: .24em; text-transform: uppercase; display: grid; gap: 8px; }
+.cs-ph > span em { font: italic 400 1.15rem/1.2 var(--serif); letter-spacing: 0; text-transform: none; }
+.cs-wide { aspect-ratio: 16 / 8; }
+.cs-phone { aspect-ratio: 9 / 16; border-radius: 22px; }
+.cs-sec { padding-block: clamp(80px, 10vw, 140px); }
+.cs-facts { margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px clamp(20px, 3vw, 40px); border-top: 1px solid var(--ink); }
+.cs-facts > div { padding-top: 18px; }
+.cs-facts dd { margin: 10px 0 0; font: 400 clamp(1.15rem, 1.5vw, 1.35rem)/1.3 var(--serif); overflow-wrap: anywhere; }
+.cs-two { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px clamp(32px, 6vw, 96px); align-items: start; }
+.cs-big { margin: 0; font: 400 clamp(1.8rem, 3.2vw, 2.9rem)/1.18 var(--serif); letter-spacing: -.012em; }
+.cs-two p:not(.cs-big), .cs-acc p, .cs-role p { color: #3a332e; }
+.cs-acc { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px clamp(20px, 3vw, 44px); }
+.cs-acc .cs-phone { width: min(100%, 260px); margin-bottom: 26px; }
+.cs-acc h3, .cs-role h3, .cs-accstats h3 { margin: 10px 0 12px; font: 400 clamp(1.6rem, 2.3vw, 2.1rem)/1.05 var(--serif); letter-spacing: -.01em; }
+.cs-acc h3 em, .cs-accstats h3 em { font-style: italic; }
+.cs-role { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px clamp(32px, 6vw, 96px); }
+.cs-role .n { font: italic 400 1.3rem/1 var(--serif); color: var(--muted); }
+.cs-role p { max-width: 52ch; }
+.cs-steps { list-style: none; margin: clamp(48px, 6vw, 80px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.cs-steps li { padding: 18px 16px 0 0; font: 400 clamp(1.05rem, 1.4vw, 1.25rem)/1.25 var(--serif); }
+.cs-steps .n { display: block; margin-bottom: 10px; font: 500 .68rem/1 var(--sans); letter-spacing: .2em; color: var(--muted); }
+.cs-gallery { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); align-items: start; }
+.cs-gallery { align-items: end; }
+.cs-gallery .g1 { grid-column: 1 / 9; aspect-ratio: 3 / 2; }
+.cs-gallery .g2 { grid-column: 9 / -1; width: 100%; aspect-ratio: auto; height: 100%; min-height: 0; }
+.cs-gallery .g3 { grid-column: 1 / 6; aspect-ratio: 15 / 14; }
+.cs-gallery .g4 { grid-column: 6 / -1; aspect-ratio: 3 / 2; }
+.cs-results { background: var(--panel); }
+.cs-results .cs-ph { background: #fff; }
+.cs-total { list-style: none; margin: 0 0 clamp(60px, 8vw, 110px); padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px clamp(20px, 3vw, 40px); }
+.cs-total b { display: block; font: 400 clamp(3rem, 6vw, 5.6rem)/.95 var(--serif); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.cs-total span { display: block; margin-top: 12px; color: #4a423b; max-width: 22ch; }
+.cs-accstats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px clamp(20px, 3vw, 44px); }
+.cs-accstats > div { border-top: 1px solid var(--ink); padding-top: 18px; }
+.cs-accstats dl { margin: 0; }
+.cs-accstats dl > div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.cs-accstats dt { color: #4a423b; }
+.cs-accstats dd { margin: 0; text-align: right; font: 400 1.2rem/1.3 var(--serif); }
+.cs-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-top: 18px; text-decoration: none; font: 400 1.1rem/1.3 var(--serif); }
+.cs-top .label { width: 100%; }
+.cs-top:hover { color: var(--wine); }
+.cs-next { display: flex; justify-content: center; }
+@media (max-width: 960px) {
+  .cs-facts, .cs-total { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-acc, .cs-accstats { grid-template-columns: minmax(0, 1fr); }
+  .cs-acc li { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); column-gap: 28px; align-content: start; }
+  .cs-acc .cs-phone { grid-row: 1 / span 3; margin: 0; }
+  .cs-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 24px; }
+}
+@media (max-width: 720px) {
+  .cs-two, .cs-role { grid-template-columns: minmax(0, 1fr); }
+  .cs-wide { aspect-ratio: 4 / 3; }
+  .cs-acc li { grid-template-columns: minmax(0, 1fr); }
+  .cs-acc .cs-phone { grid-row: auto; width: min(70%, 240px); margin-bottom: 22px; }
+  .cs-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-gallery .g1 { grid-column: 1 / -1; }
+  .cs-gallery .g2 { grid-column: 1; aspect-ratio: 9 / 16; height: auto; }
+  .cs-gallery .g3 { grid-column: 2; aspect-ratio: 9 / 16; }
+  .cs-gallery .g4 { grid-column: 1 / -1; }
+  .cs-title .ln:nth-child(2) { padding-left: 8%; }
+}
+.cs.play .cs-title .ln > span { animation: line-up 1.2s cubic-bezier(.16,.84,.24,1) both; }
+.cs.play .cs-title .ln:nth-child(2) > span { animation-delay: .14s; }
+@media (prefers-reduced-motion: reduce) { .cs.play .cs-title .ln > span { animation: none; } }
+
 </style>
 </head>
 <body>
@@ -542,6 +620,10 @@ a.cover-btn { text-decoration: none; color: inherit; }
           <span class="cover-img ph"><img src="images/projects/confiserie/cover-01.jpg" alt="Cover of Bazaar" loading="lazy" width="1800" height="1013"></span>
           <span class="cover-meta"><span class="n">05</span><h3><em>Bazaar</em></h3><span class="label">Retail concept</span><p>Concept retail store designed at the Savannah College of Art and Design.</p></span>
         </button></li>
+        <li><a class="cover-btn" href="#/fifa">
+          <span class="cover-img ph type-cover"><span>FIFA World Cup 26</span><em>Atlanta</em></span>
+          <span class="cover-meta"><span class="n">06</span><h3>FIFA World Cup 26 <em>Atlanta</em></h3><span class="label">Social strategy</span><p>SCADpro × Metro Atlanta Chamber: social strategy and content for three accounts during the World Cup.</p></span>
+        </a></li>
       </ul>
     <div class="more">
       <h3>More projects</h3>
@@ -554,6 +636,160 @@ a.cover-btn { text-decoration: none; color: inherit; }
           <li><a href="https://simarrnagi21.wixsite.com/my-site/portfolio-collections/my-portfolio/reinvention-of-la-perla" target="_blank" rel="noopener">Re-invention of La Perla</a></li>
         </ul>
     </div>
+  </div>
+</section>
+</div>
+
+<div class="page cs" data-page="fifa" hidden>
+<div class="sub-top inner"><div class="top"><a class="mono" href="#/">Simar <em>Nagi</em></a><nav aria-label="Sections"><a href="#/">Home</a><a href="#/work">Work</a><a href="#contacts">Contact</a></nav></div></div>
+
+<section class="inner cs-hero">
+  <div class="sec-in">
+    <a class="cs-back" href="#/work"><span aria-hidden="true">←</span> All projects</a>
+    <span class="label cs-a">SCADpro × Metro Atlanta Chamber</span>
+    <h1 class="cs-title"><span class="ln"><span>FIFA World Cup 26</span></span><span class="ln"><span><em>Atlanta</em></span></span></h1>
+    <p class="cs-lead cs-a">Social strategy and content for three Metro Atlanta Chamber accounts during the FIFA World Cup 26 in Atlanta.</p>
+    <figure class="cs-ph cs-wide sr-ph"><span>Photo to come<em>Fan Festival, Centennial Olympic Park</em></span></figure>
+  </div>
+</section>
+
+<section class="inner cs-sec" style="padding-top:0">
+  <div class="sec-in">
+    <dl class="cs-facts">
+      <div class="cs-a"><dt class="label">Client</dt><dd>Metro Atlanta Chamber, through SCADpro</dd></div>
+      <div class="cs-a"><dt class="label">My role</dt><dd>Social strategy and content creation</dd></div>
+      <div class="cs-a"><dt class="label">Timeline</dt><dd>June — July 2026, on-site in Atlanta</dd></div>
+      <div class="cs-a"><dt class="label">Accounts</dt><dd>@fwc26atlanta, @atlantawhereyoubelong, @atlchamber</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="inner cs-sec">
+  <div class="sec-in">
+    <div class="head"><h2>The <em>brief</em></h2><span class="label">01</span></div>
+    <div class="cs-two">
+      <p class="cs-big cs-a">In summer 2026 Atlanta hosted World Cup matches for the first time, eight of them at Mercedes-Benz Stadium.</p>
+      <div class="cs-a">
+        <p>SCADpro partnered with the Metro Atlanta Chamber (MAC), which runs three social media accounts. Each one has a different audience, tone and strategy.</p>
+        <p>Our team planned and posted content for all three throughout the tournament, and had to capture the energy and enthusiasm of the city in real time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="inner cs-sec" style="padding-top:0">
+  <div class="sec-in">
+    <div class="head"><h2>Three <em>accounts</em></h2><span class="label">02</span></div>
+    <ul class="cs-acc">
+      <li class="cs-a">
+        <figure class="cs-ph cs-phone"><span>Reel to come</span></figure>
+        <span class="label">@fwc26atlanta</span>
+        <h3>FIFA World Cup 26 <em>Atlanta</em></h3>
+        <p>Everything about the World Cup and the matches in Atlanta: real-time football reels, Fan Festival content and memes.</p>
+      </li>
+      <li class="cs-a">
+        <figure class="cs-ph cs-phone"><span>Post to come</span></figure>
+        <span class="label">@atlantawhereyoubelong</span>
+        <h3>Atlanta, <em>Where You Belong</em></h3>
+        <p>The city itself: things to do for children, young people and older residents, places to hang out, and postcards from Atlanta.</p>
+      </li>
+      <li class="cs-a">
+        <figure class="cs-ph cs-phone"><span>Post to come</span></figure>
+        <span class="label">@atlchamber</span>
+        <h3>Metro Atlanta <em>Chamber</em></h3>
+        <p>The business account: business events in Atlanta, networking events for interns such as Interns After 5, and civic updates.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="inner cs-sec" style="padding-top:0">
+  <div class="sec-in">
+    <div class="head"><h2>My <em>role</em></h2><span class="label">03</span></div>
+    <div class="cs-role">
+      <div class="cs-a">
+        <span class="n">i.</span>
+        <h3>Social strategy</h3>
+        <p>I tracked competitors' social media pages and their numbers: which reels were doing well and which were not. From that, I suggested different strategies to boost engagement on our accounts.</p>
+      </div>
+      <div class="cs-a">
+        <span class="n">ii.</span>
+        <h3>Content creation</h3>
+        <p>We went out in the field to capture content at the FIFA Fan Festival and at Metro Atlanta Chamber events at Georgia Tech.</p>
+      </div>
+    </div>
+    <ol class="cs-steps">
+      <li class="cs-a"><span class="n">01</span>Track competitor pages</li>
+      <li class="cs-a"><span class="n">02</span>Compare what performs</li>
+      <li class="cs-a"><span class="n">03</span>Suggest strategies</li>
+      <li class="cs-a"><span class="n">04</span>Shoot in the field</li>
+      <li class="cs-a"><span class="n">05</span>Post in real time</li>
+    </ol>
+  </div>
+</section>
+
+<section class="inner cs-sec" style="padding-top:0">
+  <div class="sec-in">
+    <div class="head"><h2>In the <em>field</em></h2><span class="label">04</span></div>
+    <div class="cs-gallery">
+      <figure class="cs-ph sr-ph g1"><span>Photo to come<em>Fan Festival</em></span></figure>
+      <figure class="cs-ph cs-phone sr-ph g2"><span>Reel to come</span></figure>
+      <figure class="cs-ph sr-ph g3"><span>Photo to come<em>Georgia Tech event</em></span></figure>
+      <figure class="cs-ph sr-ph g4"><span>Photo to come<em>Matchday</em></span></figure>
+    </div>
+  </div>
+</section>
+
+<section class="inner cs-sec cs-results">
+  <div class="sec-in">
+    <div class="head"><h2><em>Results</em></h2><span class="label">1 June — 17 July 2026</span></div>
+    <ul class="cs-total">
+      <li class="cs-a"><b data-count="854">854</b><span>posts by the SCAD team across the three accounts</span></li>
+      <li class="cs-a"><b data-count="119.3" data-suffix="M">119.3M</b><span>impressions</span></li>
+      <li class="cs-a"><b data-count="25.5" data-suffix="M">25.5M</b><span>video views on @fwc26atlanta</span></li>
+      <li class="cs-a"><b data-count="2.4" data-suffix="M+">2.4M+</b><span>engagements on @fwc26atlanta</span></li>
+    </ul>
+    <div class="cs-accstats">
+      <div class="cs-a">
+        <h3>FIFA World Cup 26 <em>Atlanta</em></h3>
+        <dl>
+          <div><dt>Impressions</dt><dd>83.4M</dd></div>
+          <div><dt>Engagements</dt><dd>2.43M</dd></div>
+          <div><dt>Engagement rate</dt><dd>3%</dd></div>
+          <div><dt>Followers</dt><dd>45K → 107K</dd></div>
+          <div><dt>Instagram posts</dt><dd>376</dd></div>
+        </dl>
+        <a class="cs-top" href="https://www.instagram.com/p/DZoCvlrkVcN/" target="_blank" rel="noopener"><span class="label">Top post</span>781.4K likes, 4.9K comments <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="cs-a">
+        <h3>Atlanta, <em>Where You Belong</em></h3>
+        <dl>
+          <div><dt>Impressions</dt><dd>35.8M</dd></div>
+          <div><dt>Engagements</dt><dd>507K</dd></div>
+          <div><dt>Instagram followers</dt><dd>49K → 94K</dd></div>
+          <div><dt>TikTok engagement</dt><dd>2% → 8%</dd></div>
+          <div><dt>Posts</dt><dd>235 Instagram, 12 LinkedIn</dd></div>
+        </dl>
+        <a class="cs-top" href="https://www.instagram.com/p/DaRAvuckczZ/" target="_blank" rel="noopener"><span class="label">Top post</span>149.2K likes, 7.5K reposts <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="cs-a">
+        <h3>Metro Atlanta <em>Chamber</em></h3>
+        <dl>
+          <div><dt>Impressions</dt><dd>112.6K</dd></div>
+          <div><dt>Engagement rate</dt><dd>17.2%</dd></div>
+          <div><dt>Link clicks</dt><dd>14,951</dd></div>
+          <div><dt>Instagram followers</dt><dd>16K → 18K</dd></div>
+          <div><dt>Posts</dt><dd>183 Instagram, 48 LinkedIn</dd></div>
+        </dl>
+        <a class="cs-top" href="https://www.instagram.com/p/DZnxZIfn_LR/" target="_blank" rel="noopener"><span class="label">Top post</span>7.1K likes, 170 reposts <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="inner cs-sec" style="padding-top:0">
+  <div class="sec-in cs-next">
+    <a class="more-link" href="#/work"><span aria-hidden="true">←</span> All projects</a>
   </div>
 </section>
 </div>
@@ -756,6 +992,9 @@ a.cover-btn { text-decoration: none; color: inherit; }
     tag('.all-link', 'sr-up');
     tag('.edu li', 'sr-up', true);
     tag('.contacts h2, .contact-row > *', 'sr-up', true);
+    tag('.cs .cs-a', 'sr-up', true);
+    tag('.cs-gallery .cs-ph', 'sr-ph', true);
+    tag('.cs-wide', 'sr-ph');
     document.documentElement.classList.add('sr-js');
     function check() {
       var edge = window.innerHeight * 0.9;
@@ -772,17 +1011,54 @@ a.cover-btn { text-decoration: none; color: inherit; }
   })();
 </script>
 <script>
+  /* FIFA case study: title line-up on entry, numbers count up when the results come into view */
+  (function () {
+    var cs = document.querySelector('.cs');
+    if (!cs) return;
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.csEnter = function (page) {
+      if (page !== 'fifa' || reduced) return;
+      cs.classList.remove('play'); void cs.offsetWidth; cs.classList.add('play');
+    };
+    var nums = Array.prototype.slice.call(cs.querySelectorAll('[data-count]'));
+    if (reduced || !nums.length) return;
+    function fmt(v, dec) { return dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US'); }
+    function run(el) {
+      var end = parseFloat(el.getAttribute('data-count')), suf = el.getAttribute('data-suffix') || '';
+      var dec = (el.getAttribute('data-count').split('.')[1] || '').length, t0 = null;
+      function step(t) {
+        if (t0 === null) t0 = t;
+        var k = Math.min(1, (t - t0) / 1600), e = 1 - Math.pow(1 - k, 3);
+        el.textContent = fmt(end * e, dec) + suf;
+        if (k < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    function check() {
+      if (cs.hidden) return;
+      var edge = window.innerHeight * 0.85;
+      nums = nums.filter(function (el) {
+        if (el.getBoundingClientRect().top < edge) { run(el); return false; }
+        return true;
+      });
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('hashchange', function () { requestAnimationFrame(check); });
+  })();
+</script>
+<script>
   /* simple page routing: #/ home, #/about about me, #/work all projects; plain #anchors scroll within the current page */
   (function () {
     var pages = document.querySelectorAll('.page'), current = null;
-    var titles = { home: 'Simarpreet Kaur Nagi', about: 'About · Simarpreet Kaur Nagi', work: 'Projects · Simarpreet Kaur Nagi' };
+    var titles = { home: 'Simarpreet Kaur Nagi', about: 'About · Simarpreet Kaur Nagi', work: 'Projects · Simarpreet Kaur Nagi', fifa: 'FIFA World Cup 26 Atlanta · Simarpreet Kaur Nagi' };
     function route() {
       var h = location.hash || '#/', page = current || 'home', anchor = null;
-      if (h.indexOf('#/') === 0) page = h.indexOf('#/about') === 0 ? 'about' : h.indexOf('#/work') === 0 ? 'work' : 'home';
+      if (h.indexOf('#/') === 0) page = h.indexOf('#/about') === 0 ? 'about' : h.indexOf('#/work') === 0 ? 'work' : h.indexOf('#/fifa') === 0 ? 'fifa' : 'home';
       else anchor = document.getElementById(h.slice(1));
       if (page !== current) {
         pages.forEach(function (p) { p.hidden = p.getAttribute('data-page') !== page; });
         current = page; document.title = titles[page];
+        if (window.csEnter) window.csEnter(page);
         if (!anchor) window.scrollTo({ top: 0, behavior: 'instant' });
       }
       if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
