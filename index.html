@@ -398,7 +398,18 @@ a.cover-btn { text-decoration: none; color: inherit; }
 .cs-ph { margin: 0; background: var(--panel); display: grid; place-content: center; text-align: center; color: var(--muted); }
 .cs-ph > span { font: 500 .68rem/1.4 var(--sans); letter-spacing: .24em; text-transform: uppercase; display: grid; gap: 8px; }
 .cs-ph > span em { font: italic 400 1.15rem/1.2 var(--serif); letter-spacing: 0; text-transform: none; }
-.cs-wide { aspect-ratio: 16 / 8; }
+.cs-wide { aspect-ratio: 16 / 9; }
+.cs-media { margin: 0; overflow: hidden; background: var(--panel); }
+.cs-media img, .cs-media video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cs-gallery .cs-media { background: none; }
+.cs-gallery .cs-media img { background: var(--panel); }
+.cs-media figcaption { padding-top: 12px; font: 400 .95rem/1.3 var(--sans); color: var(--muted); }
+.cs-brief-ph { margin-top: clamp(32px, 4vw, 56px); width: min(100%, 420px); aspect-ratio: 3 / 4; }
+.cs-feed { display: grid; grid-template-columns: repeat(2, minmax(0, 260px)) minmax(0, 1fr); gap: clamp(20px, 3vw, 44px); align-items: end; margin-top: clamp(64px, 8vw, 110px); }
+.cs-feed .cs-phone { aspect-ratio: 9 / 16; margin: 0; overflow: hidden; background: #000; box-shadow: 0 18px 40px -24px rgba(31,27,24,.5); }
+.cs-feed .cs-phone img, .cs-feed .cs-phone video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cs-feed p { margin: 0; color: #4a423b; max-width: 26ch; }
+.cs-feed p .label { display: block; margin-bottom: 8px; }
 .cs-phone { aspect-ratio: 9 / 16; border-radius: 22px; }
 .cs-sec { padding-block: clamp(80px, 10vw, 140px); }
 .cs-facts { margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px clamp(20px, 3vw, 40px); border-top: 1px solid var(--ink); }
@@ -411,18 +422,20 @@ a.cover-btn { text-decoration: none; color: inherit; }
 .cs-acc .cs-phone { width: min(100%, 260px); margin-bottom: 26px; }
 .cs-acc h3, .cs-role h3, .cs-accstats h3 { margin: 10px 0 12px; font: 400 clamp(1.6rem, 2.3vw, 2.1rem)/1.05 var(--serif); letter-spacing: -.01em; }
 .cs-acc h3 em, .cs-accstats h3 em { font-style: italic; }
-.cs-role { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px clamp(32px, 6vw, 96px); }
+.cs-role { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px clamp(32px, 6vw, 96px); align-items: center; }
+.cs-role-ph { aspect-ratio: 2 / 3; }
+.cs-role-txt { display: grid; gap: clamp(32px, 4vw, 56px); }
+.cs-role-txt h3 { margin-top: 6px; }
 .cs-role .n { font: italic 400 1.3rem/1 var(--serif); color: var(--muted); }
 .cs-role p { max-width: 52ch; }
 .cs-steps { list-style: none; margin: clamp(48px, 6vw, 80px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--line); }
 .cs-steps li { padding: 18px 16px 0 0; font: 400 clamp(1.05rem, 1.4vw, 1.25rem)/1.25 var(--serif); }
 .cs-steps .n { display: block; margin-bottom: 10px; font: 500 .68rem/1 var(--sans); letter-spacing: .2em; color: var(--muted); }
-.cs-gallery { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); align-items: start; }
-.cs-gallery { align-items: end; }
-.cs-gallery .g1 { grid-column: 1 / 9; aspect-ratio: 3 / 2; }
-.cs-gallery .g2 { grid-column: 9 / -1; width: 100%; aspect-ratio: auto; height: 100%; min-height: 0; }
-.cs-gallery .g3 { grid-column: 1 / 6; aspect-ratio: 15 / 14; }
-.cs-gallery .g4 { grid-column: 6 / -1; aspect-ratio: 3 / 2; }
+.cs-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 3vw, 40px) clamp(16px, 2vw, 28px); }
+.cs-gallery .cs-media { overflow: visible; }
+.cs-gallery img { aspect-ratio: 4 / 5; height: auto; }
+.cs-gallery .cs-team { grid-column: 2 / -1; display: flex; flex-direction: column; }
+.cs-gallery .cs-team img { aspect-ratio: auto; flex: 1; min-height: 0; height: 0; }
 .cs-results { background: var(--panel); }
 .cs-results .cs-ph { background: #fff; }
 .cs-total { list-style: none; margin: 0 0 clamp(60px, 8vw, 110px); padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px clamp(20px, 3vw, 40px); }
@@ -451,10 +464,10 @@ a.cover-btn { text-decoration: none; color: inherit; }
   .cs-acc li { grid-template-columns: minmax(0, 1fr); }
   .cs-acc .cs-phone { grid-row: auto; width: min(70%, 240px); margin-bottom: 22px; }
   .cs-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .cs-gallery .g1 { grid-column: 1 / -1; }
-  .cs-gallery .g2 { grid-column: 1; aspect-ratio: 9 / 16; height: auto; }
-  .cs-gallery .g3 { grid-column: 2; aspect-ratio: 9 / 16; }
-  .cs-gallery .g4 { grid-column: 1 / -1; }
+  .cs-gallery .cs-team { grid-column: 1 / -1; }
+  .cs-gallery .cs-team img { flex: none; height: auto; aspect-ratio: 3 / 2; }
+  .cs-feed { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-feed p { grid-column: 1 / -1; }
   .cs-title .ln:nth-child(2) { padding-left: 8%; }
 }
 .cs.play .cs-title .ln > span { animation: line-up 1.2s cubic-bezier(.16,.84,.24,1) both; }
@@ -621,7 +634,7 @@ a.cover-btn { text-decoration: none; color: inherit; }
           <span class="cover-meta"><span class="n">05</span><h3><em>Bazaar</em></h3><span class="label">Retail concept</span><p>Concept retail store designed at the Savannah College of Art and Design.</p></span>
         </button></li>
         <li><a class="cover-btn" href="#/fifa">
-          <span class="cover-img ph type-cover"><span>FIFA World Cup 26</span><em>Atlanta</em></span>
+          <span class="cover-img ph"><img src="images/projects/fifa/cover-01.jpg" alt="Cover of FIFA World Cup 26 Atlanta" loading="lazy" width="1024" height="576"></span>
           <span class="cover-meta"><span class="n">06</span><h3>FIFA World Cup 26 <em>Atlanta</em></h3><span class="label">Social strategy</span><p>SCADpro × Metro Atlanta Chamber: social strategy and content for three accounts during the World Cup.</p></span>
         </a></li>
       </ul>
@@ -649,7 +662,7 @@ a.cover-btn { text-decoration: none; color: inherit; }
     <span class="label cs-a">SCADpro × Metro Atlanta Chamber</span>
     <h1 class="cs-title"><span class="ln"><span>FIFA World Cup 26</span></span><span class="ln"><span><em>Atlanta</em></span></span></h1>
     <p class="cs-lead cs-a">Social strategy and content for three Metro Atlanta Chamber accounts during the FIFA World Cup 26 in Atlanta.</p>
-    <figure class="cs-ph cs-wide sr-ph"><span>Photo to come<em>Fan Festival, Centennial Olympic Park</em></span></figure>
+    <figure class="cs-media cs-wide sr-ph"><video src="images/projects/fifa/hero.mp4" poster="images/projects/fifa/hero.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Argentina fans marching to Mercedes-Benz Stadium"></video></figure>
   </div>
 </section>
 
@@ -668,7 +681,10 @@ a.cover-btn { text-decoration: none; color: inherit; }
   <div class="sec-in">
     <div class="head"><h2>The <em>brief</em></h2><span class="label">01</span></div>
     <div class="cs-two">
+      <div>
       <p class="cs-big cs-a">In summer 2026 Atlanta hosted World Cup matches for the first time, eight of them at Mercedes-Benz Stadium.</p>
+      <figure class="cs-media cs-brief-ph sr-ph"><img src="images/projects/fifa/g-stadium.jpg" alt="Simar outside Mercedes-Benz Stadium, dressed in World Cup 2026 banners" width="1200" height="1600" loading="lazy"></figure>
+      </div>
       <div class="cs-a">
         <p>SCADpro partnered with the Metro Atlanta Chamber (MAC), which runs three social media accounts. Each one has a different audience, tone and strategy.</p>
         <p>Our team planned and posted content for all three throughout the tournament, and had to capture the energy and enthusiasm of the city in real time.</p>
@@ -682,24 +698,26 @@ a.cover-btn { text-decoration: none; color: inherit; }
     <div class="head"><h2>Three <em>accounts</em></h2><span class="label">02</span></div>
     <ul class="cs-acc">
       <li class="cs-a">
-        <figure class="cs-ph cs-phone"><span>Reel to come</span></figure>
         <span class="label">@fwc26atlanta</span>
         <h3>FIFA World Cup 26 <em>Atlanta</em></h3>
         <p>Everything about the World Cup and the matches in Atlanta: real-time football reels, Fan Festival content and memes.</p>
       </li>
       <li class="cs-a">
-        <figure class="cs-ph cs-phone"><span>Post to come</span></figure>
         <span class="label">@atlantawhereyoubelong</span>
         <h3>Atlanta, <em>Where You Belong</em></h3>
         <p>The city itself: things to do for children, young people and older residents, places to hang out, and postcards from Atlanta.</p>
       </li>
       <li class="cs-a">
-        <figure class="cs-ph cs-phone"><span>Post to come</span></figure>
         <span class="label">@atlchamber</span>
         <h3>Metro Atlanta <em>Chamber</em></h3>
         <p>The business account: business events in Atlanta, networking events for interns such as Interns After 5, and civic updates.</p>
       </li>
     </ul>
+    <div class="cs-feed">
+      <figure class="cs-phone cs-a"><img src="images/projects/fifa/post.jpg" alt="Instagram post on the host city account: a fan in a pink cap in front of an Atlanta mural, captioned World, Atlanta is Ready For You" width="867" height="1600" loading="lazy"></figure>
+      <figure class="cs-phone cs-a"><video src="images/projects/fifa/reel.mp4" poster="images/projects/fifa/reel.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Reel of Cabo Verde fans celebrating outside the stadium"></video></figure>
+      <p class="cs-a"><span class="label">On the feed</span>A matchday post and a fan reel from the World Cup account.</p>
+    </div>
   </div>
 </section>
 
@@ -707,6 +725,8 @@ a.cover-btn { text-decoration: none; color: inherit; }
   <div class="sec-in">
     <div class="head"><h2>My <em>role</em></h2><span class="label">03</span></div>
     <div class="cs-role">
+      <figure class="cs-media cs-role-ph sr-ph"><img src="images/projects/fifa/g-shoot.jpg" alt="Simar filming content on her phone in a SCAD cap" width="1066" height="1600" loading="lazy"></figure>
+      <div class="cs-role-txt">
       <div class="cs-a">
         <span class="n">i.</span>
         <h3>Social strategy</h3>
@@ -716,6 +736,7 @@ a.cover-btn { text-decoration: none; color: inherit; }
         <span class="n">ii.</span>
         <h3>Content creation</h3>
         <p>We went out in the field to capture content at the FIFA Fan Festival and at Metro Atlanta Chamber events at Georgia Tech.</p>
+      </div>
       </div>
     </div>
     <ol class="cs-steps">
@@ -732,10 +753,11 @@ a.cover-btn { text-decoration: none; color: inherit; }
   <div class="sec-in">
     <div class="head"><h2>In the <em>field</em></h2><span class="label">04</span></div>
     <div class="cs-gallery">
-      <figure class="cs-ph sr-ph g1"><span>Photo to come<em>Fan Festival</em></span></figure>
-      <figure class="cs-ph cs-phone sr-ph g2"><span>Reel to come</span></figure>
-      <figure class="cs-ph sr-ph g3"><span>Photo to come<em>Georgia Tech event</em></span></figure>
-      <figure class="cs-ph sr-ph g4"><span>Photo to come<em>Matchday</em></span></figure>
+      <figure class="cs-media"><img src="images/projects/fifa/g-fanfest.jpg" alt="Crowd at the FIFA Fan Festival Atlanta in front of the big screen" width="1200" height="1600" loading="lazy"><figcaption>FIFA Fan Festival, Centennial Olympic Park</figcaption></figure>
+      <figure class="cs-media"><img src="images/projects/fifa/g-pass.jpg" alt="Atlanta media pass held up in front of the #FIFAWORLDCUP wall" width="1200" height="1600" loading="lazy"><figcaption>Media pass, Metro Atlanta content contributor</figcaption></figure>
+      <figure class="cs-media"><img src="images/projects/fifa/g-wall.jpg" alt="Simar in front of the #FIFAWORLDCUP wall" width="1200" height="1600" loading="lazy"><figcaption>Inside Mercedes-Benz Stadium</figcaption></figure>
+      <figure class="cs-media"><img src="images/projects/fifa/g-notes.jpg" alt="Team wall of printed posts and notes" width="1200" height="1600" loading="lazy"><figcaption>Our posts on the team wall</figcaption></figure>
+      <figure class="cs-media cs-team"><img src="images/projects/fifa/team.jpg" alt="The SCADpro team with faculty" width="1600" height="1067" loading="lazy"><figcaption>The SCADpro team</figcaption></figure>
     </div>
   </div>
 </section>
@@ -993,8 +1015,8 @@ a.cover-btn { text-decoration: none; color: inherit; }
     tag('.edu li', 'sr-up', true);
     tag('.contacts h2, .contact-row > *', 'sr-up', true);
     tag('.cs .cs-a', 'sr-up', true);
-    tag('.cs-gallery .cs-ph', 'sr-ph', true);
-    tag('.cs-wide', 'sr-ph');
+    tag('.cs-gallery .cs-media', 'sr-up', true);
+    tag('.cs .sr-ph', 'sr-ph');
     document.documentElement.classList.add('sr-js');
     function check() {
       var edge = window.innerHeight * 0.9;
@@ -1016,6 +1038,7 @@ a.cover-btn { text-decoration: none; color: inherit; }
     var cs = document.querySelector('.cs');
     if (!cs) return;
     var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) cs.querySelectorAll('video').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; });
     window.csEnter = function (page) {
       if (page !== 'fifa' || reduced) return;
       cs.classList.remove('play'); void cs.offsetWidth; cs.classList.add('play');
